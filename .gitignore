@@ -1,5 +1,7 @@
+.gitconfig
 .bash_history
 .bash_logout
 .bashrc.bak
 .ssh/
 .viminfo
+.cache
