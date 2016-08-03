@@ -5,3 +5,5 @@
 .ssh/
 .viminfo
 .cache
+.htoprc
+.psql_history
