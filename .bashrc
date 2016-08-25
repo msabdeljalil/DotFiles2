@@ -119,4 +119,4 @@ fi
 FIX_VPN_POW=yes
 FIX_VPN_MINIRAISER=yes
 
-alias db_rebuild='sudo restart /etc/init.d/postgresql && pushd cnuapp/ && bin/cnurake db:rebuild && popd'
+alias db_rebuild='sudo /etc/init.d/postgresql restart && pushd cnuapp/ && bin/cnurake db:rebuild && popd'
