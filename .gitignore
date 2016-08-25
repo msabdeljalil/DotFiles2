@@ -7,3 +7,5 @@
 .cache
 .htoprc
 .psql_history
+.lesshst
+.pry_history
