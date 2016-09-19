@@ -4,7 +4,9 @@
 .bashrc.bak
 .ssh/
 .viminfo
-.vim/
+.vim/bundle
+.vim/bundle
+.vim/.netrwhist
 .cache
 .htoprc
 .psql_history
