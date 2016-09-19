@@ -120,3 +120,20 @@ FIX_VPN_POW=yes
 FIX_VPN_MINIRAISER=yes
 
 alias db_rebuild='sudo /etc/init.d/postgresql restart && pushd cnuapp/ && bin/cnurake db:rebuild && popd'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+export DISPLAY=:1
+
+source /usr/share/chruby/chruby.sh
+
+RUBIES+=(
+  /opt/ruby-enterprise
+)
+
+chruby ruby-enterprise
