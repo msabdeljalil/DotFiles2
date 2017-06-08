@@ -79,20 +79,11 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias l='ls -CFlah --color'
-    alias cnuspec='VERBOSE=1 cnuapp/bin/cnu_env rspec --color'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias cnuspec='VERBOSE=1 verbose=1 cnuapp/bin/cnu_env rspec --color'
 fi
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
 alias console='cnuapp/script/console integration'
+alias db_rebuild='sudo /etc/init.d/postgresql restart && pushd cnuapp/ && bin/cnurake db:rebuild && popd'
 alias setd='sudo ntpdate -u -p1 ntp.enova.com'
 alias tm='tmux attach'
 alias ack="ack-grep --ignore-dir=vendor/ --ignore-dir=suite/ --ignore-dir=cnuapp_qa/"
@@ -119,7 +110,6 @@ fi
 FIX_VPN_POW=yes
 FIX_VPN_MINIRAISER=yes
 
-alias db_rebuild='sudo /etc/init.d/postgresql restart && pushd cnuapp/ && bin/cnurake db:rebuild && popd'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -131,9 +121,7 @@ fi
 export DISPLAY=:1
 
 source /usr/share/chruby/chruby.sh
-
 RUBIES+=(
   /opt/ruby-enterprise
 )
-
 chruby ruby-enterprise
