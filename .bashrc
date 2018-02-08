@@ -119,9 +119,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export DISPLAY=:1
+export EDITOR=vim
 
 source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 RUBIES+=(
   /opt/ruby-enterprise
 )
-chruby ruby-enterprise
